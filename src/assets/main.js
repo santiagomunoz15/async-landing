@@ -28,7 +28,7 @@ async function fetchData (urlApi) {
     const videos = await fetchData(API);
     let view = `
     ${videos.items.map(video => `
-      <div style="background-color: #f7f7f7; border-radius: 8px;" class="group relative">
+      <div style="background-color: #f7f7f7; border-radius: 8px;" class="group relative shadow-md hover:scale-105">
         <div class="w-full bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:background-color-gray-900 lg:aspect-none">
           <img src="${video.snippet.thumbnails.high.url}" alt="${video.snippet.title}" style="width: 100%; height: 100%; -ms-transform: scale(1.7,1.7); -webkit-transform: scale(1.7,1.7); transform: scale(1.7,1.7)";>
         </div>
