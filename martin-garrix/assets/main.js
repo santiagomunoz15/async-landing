@@ -28,12 +28,12 @@ async function fetchData (urlApi) {
     const videos = await fetchData(API);
     let view = `
     ${videos.items.map(video => `
-      <div class="group relative bg-[#131313] rounded-lg shadow-xl hover:scale-105">
+      <div class="group relative bg-[#131313] rounded-lg shadow-xl hover:scale-105 transition ease-in-out delay-50">
         <div class="w-full aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:background-color-gray-900 lg:aspect-none">
           <img src="${video.snippet.thumbnails.high.url}" alt="${video.snippet.title}">
         </div>
         <div style="padding: 18px">
-          <h3 onclick="window.open(href='${YT + video.id.videoId}', target='_blank')" class="text-sm text-gray-300 hover:text-white hover:font-semibold transition">
+          <h3 onclick="window.open(href='${YT + video.id.videoId}', target='_blank')" class="text-sm text-gray-300 hover:text-white hover:font-semibold transition delay-50">
             <span aria-hidden="true" class="absolute inset-0"></span>
             ${video.snippet.title}
           </h3>
